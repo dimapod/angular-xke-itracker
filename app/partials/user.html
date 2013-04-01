@@ -14,7 +14,7 @@
                 <div class="controls">
                     <input type="text" id="login" placeholder="jblack"
                            class="input-medium"
-                           required>  <!-- EXO-2.4 (ng-model) -->
+                           ng-model="login" required>  <!-- EXO-2.4 (ng-model) -->
                 </div>
             </div>
             <div class="control-group">
@@ -23,14 +23,15 @@
                 <div class="controls">
                     <input type="text" id="name" placeholder="Joe Black"
                            class="input-xlarge"
-                           required>  <!-- EXO-2.4 (ng-model)-->
+                           ng-model="name" required>  <!-- EXO-2.4 (ng-model)-->
                 </div>
             </div>
         </div>
 
         <div class="modal-footer">
             <button class="btn btn-primary"
-                    ng-disabled="loginForm.$invalid"> <!-- EXO-2.4 ( ng-click: call doLogin() ) -->
+                    ng-disabled="loginForm.$invalid"
+                    ng-click="doLogin(login, name)"> <!-- EXO-2.4 ( ng-click: call doLogin() ) -->
                 Login
             </button>
         </div>
