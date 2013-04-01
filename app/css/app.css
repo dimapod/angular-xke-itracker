@@ -1,0 +1,137 @@
+/****************************************
+ * general purpose css-only components  *
+ ****************************************/
+
+.btr-panel {
+    background-color: #fff;
+
+    border: 1px solid black;
+
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    border-top-left-radius: 3px;
+
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-right-radius: 3px;
+
+    margin-bottom: 20px;
+    padding: 10px 10px 20px 10px;
+
+    overflow: hidden;
+}
+
+.btr-panel > h4 {
+    background-color: #E5E5E5;
+    margin: -10px -10px 10px -10px;
+    padding: 10px 10px 10px 10px;
+}
+
+.fm-right {
+    text-align: right;
+}
+
+/****************************************
+ * User css                             *
+ ****************************************/
+.btr-login-bkg {
+    background-image: url(../img/bugtracker.jpg);
+    opacity: 0.4;
+    height: 705px;
+}
+
+.btr-login {
+    padding: 0px 0px 10px 0px;
+    text-align: right;
+}
+
+.tweet {
+    transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    -webkit-transition: all ease 1s;
+    -o-transition: all ease 1s;
+    overflow: hidden;
+    max-height: 200px;
+    margin: 0px;
+    padding: 12px 0px 12px 14px;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 1.1em;
+}
+
+.animate {
+    max-height: 0;
+}
+
+.active {
+    background-color: #f4f4f4;
+}
+
+/****************************************
+ * Rating                               *
+ ****************************************/
+
+.btr-rating {
+    color: #a9a9a9;
+    margin: 0;
+    padding: 0;
+
+}
+
+ul.btr-rating {
+    display: inline-block;
+}
+
+.btr-rating-pointer {
+    cursor: pointer;
+}
+
+.btr-rating li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btr-rating .btr-selected {
+    color: #000000;
+}
+
+.btr-rating .btr-hover {
+    text-shadow: white 0 0  2px,
+    white 0 0  2px,
+    white 0 0  2px,
+    white 0 0  2px,
+    blue  0 0 10px;
+}
+
+btr-rating a {
+    visibility: hidden;
+    padding-left: 7px;
+}
+
+btr-rating:hover a {
+    visibility: visible;
+}
+
+tr.resolved { text-decoration: line-through; }
+td.minor { color: #adff2f; }
+td.major { color: #0088cc; }
+td.crash { color: orange; }
+td.block { color: red; }
+
+.legend {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 40px;
+    color: #333333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.comment {
+    padding-left: 100px;
+    padding-bottom: 10px;
+}

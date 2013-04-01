@@ -1,0 +1,70 @@
+<div class="btr-panel">
+    <h4>New issue</h4>
+
+    <form name="issueForm" class="form-horizontal" ng-submit="add()">
+        <fieldset>
+            <div class="control-group">
+                <label class="control-label" for="reporter">Reporter</label>
+                <div class="controls">
+                    <input type="text" id="reporter" ng-model="issue.reporter" ng-readonly="false">
+                    &nbsp;Date:  {{issue.date | date:'dd/MM/yyyy - hh:mm'}}
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="product">* Product name</label>
+                <div class="controls">
+                    <input type="text" id="product" ng-model="issue.product" ng-readonly="readonly" required>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="version">Version</label>
+                <div class="controls">
+                    <input class="span2" type="text" id="version" ng-model="issue.version" ng-readonly="readonly">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="severity">* Severity</label>
+                <div class="controls">
+                    <select id="severity" ng-model="issue.severity" ng-readonly="readonly" required>
+                        <option value="minor">Minor</option>
+                        <option value="major">Major</option>
+                        <option value="crash">Crash</option>
+                        <option value="block">Block</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="priority">Priority</label>
+                <div class="controls" id="priority">
+                    <btr-rating  ng-model="$parent.issue.priority"></btr-rating>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="summary">* Summary</label>
+                <div class="controls">
+                    <input id="summary" class="span8" ng-model="issue.summary" type="text" ng-readonly="readonly" required>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="description">Description</label>
+                <div class="controls">
+                    <textarea id="description" class="span8" rows="7" ng-model="issue.description" type="text" ng-readonly="readonly"></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <input id="submit" class="btn btn-primary" ng-disabled="submitting" type="submit" value="Submit"/>
+                    <a class="btn" ng-href="#/issue">Cancel</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+</div>

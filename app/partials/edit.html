@@ -1,0 +1,97 @@
+<div class="btr-panel" xmlns="http://www.w3.org/1999/html">
+    <h4>Edit issue: #{{ issue.businessId }}</h4>
+
+    <form class="form-horizontal">  <!-- EXO-5.3 (ng-submit) -->
+        <fieldset>
+            <legend>Details</legend>
+
+            <div class="control-group">
+                <label class="control-label" for="reporter">Reporter</label>
+                <div class="controls">
+                    <input type="text" id="reporter" ng-model="issue.reporter" ng-readonly="readonly">
+                    &nbsp;Date:  {{issue.date | date:'dd/MM/yyyy - HH:mm'}}
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="product">Product name</label>
+                <div class="controls">
+                    <input type="text" id="product" ng-model="issue.product" ng-readonly="readonly">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="version">Version</label>
+                <div class="controls">
+                    <input class="span2" type="text" id="version" ng-model="issue.version" ng-readonly="readonly">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="severity">Severity</label>
+                <div class="controls">
+                    <select id="severity" ng-model="issue.severity" ng-readonly="readonly">
+                        <option value="minor">Minor</option>
+                        <option value="major">Major</option>
+                        <option value="crash">Crash</option>
+                        <option value="block">Block</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="priority">Priority</label>
+                <div class="controls" id="priority">
+                    <btr-rating  ng-model="$parent.issue.priority" readonly="readonly"></btr-rating>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="summary">Summary</label>
+                <div class="controls">
+                    <input id="summary" class="span8" ng-model="issue.summary" type="text" ng-readonly="readonly">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="description">Description</label>
+                <div class="controls">
+                    <textarea id="description" class="span8" rows="7" ng-model="issue.description" type="text" ng-readonly="readonly"></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="status">Status</label>
+                <div class="controls">
+                    <select id="status"> <!-- EXO-5.3 (ng-model) -->
+                        <option value="new">New</option>
+                        <option value="confirmed">Confirmed</option>
+                        <option value="resolved">Resolved</option>
+                        <option value="archived">Archived</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="control-label">New comment</div>
+                <div class="controls">
+                    <textarea class="span8" type="text" ng-model="newComment.comment"></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <input id="submit" type="submit" class="btn btn-primary" ng-disabled="submitting">
+                    <a class="btn" ng-href="#/issue">Cancel</a>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="legend">Comments (0)</div>  <!-- EXO-5.4 ( use {{ .. }} ) -->
+        <div class="comment">  <!-- EXO-5.4 (ng-repeat on comments) -->
+            <div>By <b>reporter</b> on 10:15 01/04/2013</div>  <!-- EXO-5.4 ( use {{ }} and date filter ) -->
+            <textarea class="span9" type="text" disabled></textarea>  <!-- EXO-5.4 (use ng-bind) -->
+        </div>
+
+    </form>
+</div>

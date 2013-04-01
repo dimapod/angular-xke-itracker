@@ -1,0 +1,33 @@
+<!-- EXO-4.2 -->
+
+<div class="btr-panel">
+    <h4>Archived issues</h4>
+
+    <div>
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Status</th>
+                <th>Product</th>
+                <th>Version</th>
+                <th>Summary</th>
+                <th>Reporter</th>
+                <th>Severity</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="issue in issues | orderBy:'businessId':'true'"> <!-- EXO-6.1 (ng-class) --> <!-- EXO-6.3.2 (filter) -->
+                <td><a ng-href="#/edit/{{issue._id}}">{{issue.businessId}}</a></td>
+                <td>{{issue.status}}</td>
+                <td>{{issue.product}}</td>
+                <td>{{issue.version}}</td>
+                <td>{{issue.summary}}</td>
+                <td>{{issue.reporter}}</td>
+                <td >{{issue.severity}}</td>  <!-- EXO-6.2 (ng-class) -->
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
