@@ -28,6 +28,10 @@ var bugTrackerApp = angular.module('bugTrackerApp', ['ngResource', 'ngSanitize']
                 controller: 'addCtrl'
             })
             // EXO-5.1 (route for /edit)
+            .when('/edit/:issueId', {
+                templateUrl: 'partials/edit.html',
+                controller: 'editCtrl'
+            })
             // EXO-1.3 (default route)
             .otherwise({
                 redirectTo: '/issue'

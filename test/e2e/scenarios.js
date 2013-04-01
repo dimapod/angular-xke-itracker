@@ -204,7 +204,7 @@ describe('E2E test suite', function () {
 
 
     // Edit view testing
-    describe('EXO-5.x: Edit view', function () {
+    ddescribe('EXO-5.x: Edit view', function () {
 
         describe('EXO-5.1: Edit route', function () {
             it('should show "edit issue" view form', function() {
