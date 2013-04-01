@@ -1,7 +1,7 @@
 <div class="btr-panel" xmlns="http://www.w3.org/1999/html">
     <h4>Edit issue: #{{ issue.businessId }}</h4>
 
-    <form class="form-horizontal">  <!-- EXO-5.3 (ng-submit) -->
+    <form class="form-horizontal" ng-submit="edit()">  <!-- EXO-5.3 (ng-submit) -->
         <fieldset>
             <legend>Details</legend>
 
@@ -63,7 +63,7 @@
             <div class="control-group">
                 <label class="control-label" for="status">Status</label>
                 <div class="controls">
-                    <select id="status"> <!-- EXO-5.3 (ng-model) -->
+                    <select id="status" ng-model="issue.status"> <!-- EXO-5.3 (ng-model) -->
                         <option value="new">New</option>
                         <option value="confirmed">Confirmed</option>
                         <option value="resolved">Resolved</option>
