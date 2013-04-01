@@ -87,10 +87,10 @@
             </div>
         </fieldset>
 
-        <div class="legend">Comments (0)</div>  <!-- EXO-5.4 ( use {{ .. }} ) -->
-        <div class="comment">  <!-- EXO-5.4 (ng-repeat on comments) -->
-            <div>By <b>reporter</b> on 10:15 01/04/2013</div>  <!-- EXO-5.4 ( use {{ }} and date filter ) -->
-            <textarea class="span9" type="text" disabled></textarea>  <!-- EXO-5.4 (use ng-bind) -->
+        <div class="legend">Comments ({{comments.length}})</div>  <!-- EXO-5.4 ( {{ }} ) -->
+        <div class="comment" ng-repeat="comment in comments">  <!-- EXO-5.4 (ng-repeat) -->
+            <div>By <b>{{comment.reporter}}</b> on {{comment.date | date:'hh:mm dd/MM/yyyy'}}</div>  <!-- EXO-5.4 ( {{ }} ) -->
+            <textarea class="span9" type="text" ng-bind="comment.comment" disabled></textarea>  <!-- EXO-5.4 (ng-bind) -->
         </div>
 
     </form>
