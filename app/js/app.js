@@ -9,7 +9,14 @@ var bugTrackerApp = angular.module('bugTrackerApp', ['ngResource', 'ngSanitize']
                 controller: 'issueCtrl'
             })
             // EXO-1.1 (route for /archive)
+            .when('/archive', {
+                templateUrl: 'partials/archive.html',
+                controller: 'issueCtrl'
+            })
             // EXO-1.1 (routes for /about)
+            .when('/about', {
+                templateUrl: 'partials/about.html'
+            })
             // EXO-2.1 (route for /user)
             // EXO-3.1 (route for /add)
             // EXO-5.1 (route for /edit)
