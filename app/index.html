@@ -20,12 +20,12 @@
                 <div class="navbar-inner">
                     <a class="brand" href="#/">iTracker</a>
                     <ul class="nav">
-                        <li id="issue"><a href="#/issue">Issues</a></li>  <!-- EXO-1.2.2 (ng-class) -->
-                        <li id="archive"><a href="#/archive">Archive</a></li>  <!-- EXO-1.2.2 (ng-class) -->
+                        <li id="issue" ng-class="{active: routeIs('/issue')}"><a href="#/issue">Issues</a></li>  <!-- EXO-1.2.2 (ng-class) -->
+                        <li id="archive" ng-class="{active: routeIs('/archive')}"><a href="#/archive">Archive</a></li>  <!-- EXO-1.2.2 (ng-class) -->
                     </ul>
 
                     <ul class="nav pull-right">
-                        <li id="about"><a href="#/about">About</a></li>  <!-- EXO-1.2.2 (ng-class) -->
+                        <li id="about" ng-class="{active: routeIs('/about')}"><a href="#/about">About</a></li>  <!-- EXO-1.2.2 (ng-class) -->
                     </ul>
                 </div>
             </div>
