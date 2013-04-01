@@ -17,7 +17,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-class="issue.status" ng-repeat="issue in issues | orderBy:'businessId':'true'"> <!-- EXO-6.1 (ng-class) --> <!-- EXO-6.3.2 (filter) -->
+            <tr ng-class="issue.status" ng-repeat="issue in issues | archived:true | orderBy:'businessId':'true'"> <!-- EXO-6.1 (ng-class) --> <!-- EXO-6.3.2 (filter) -->
                 <td><a ng-href="#/edit/{{issue._id}}">{{issue.businessId}}</a></td>
                 <td>{{issue.status}}</td>
                 <td>{{issue.product}}</td>

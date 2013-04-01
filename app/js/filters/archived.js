@@ -13,7 +13,12 @@ bugTrackerApp.filter('archived', function() {
         // you can use angular.forEach(arr, fn)
 
         angular.forEach(input, function(element) {
-            out.push(element);
+            if (element.status == STATUS_ARCHIVED && show) {
+                out.push(element);
+            } else
+            if (element.status != STATUS_ARCHIVED && !show) {
+                out.push(element);
+            }
         });
 
         return out;
