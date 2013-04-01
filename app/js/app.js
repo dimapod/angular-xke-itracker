@@ -18,6 +18,10 @@ var bugTrackerApp = angular.module('bugTrackerApp', ['ngResource', 'ngSanitize']
                 templateUrl: 'partials/about.html'
             })
             // EXO-2.1 (route for /user)
+            .when('/user', {
+                controller: 'userCtrl',
+                templateUrl: 'partials/user.html'
+            })
             // EXO-3.1 (route for /add)
             // EXO-5.1 (route for /edit)
             // EXO-1.3 (default route)
