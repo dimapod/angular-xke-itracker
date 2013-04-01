@@ -21,6 +21,9 @@ var bugTrackerApp = angular.module('bugTrackerApp', ['ngResource', 'ngSanitize']
             // EXO-3.1 (route for /add)
             // EXO-5.1 (route for /edit)
             // EXO-1.3 (default route)
+            .otherwise({
+                redirectTo: '/issue'
+            });
 
     }]);
 
