@@ -93,7 +93,7 @@ describe('E2E test suite', function () {
     });
 
     // Login testing (/user view)
-    ddescribe('EXO-2.x: login user', function () {
+    describe('EXO-2.x: login user', function () {
         beforeEach(function() {
             browser().navigateTo('/index.html#/user');
         });
